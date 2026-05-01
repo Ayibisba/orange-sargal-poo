@@ -3,7 +3,7 @@
 using namespace std;
 
 
-bool verifierAccess(string saisie);
+bool verifierAcces(string saisie);
 void afficherMenu();
 int demanderChoix();
 
