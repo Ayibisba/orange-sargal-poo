@@ -1,11 +1,9 @@
 #include <iostream>
 #include <string>
+#include "Service.h"  
+#include "Menu.h" 
 using namespace std;
 
-
-bool verifierAcces(string saisie);
-void afficherMenu();
-int demanderChoix();
 
 
 int main() {string codeUtilisateur;
