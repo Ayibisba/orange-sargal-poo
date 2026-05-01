@@ -28,7 +28,7 @@ Reproduire le service **Orange Sargal** (#221#) qui permet :
 
 
 ##  Répartition des tâches (par poste)
- ### Poste 1 – Interface & Navigation (Karamokho)
+ ### Poste 1 – Interface & Navigation (Néné)
 - Message de bienvenue
 - Vérification du #221#
 - Menu principal
@@ -38,7 +38,7 @@ Reproduire le service **Orange Sargal** (#221#) qui permet :
 
 ---
 
-### Poste 2 – Données & Catalogue (Fanta Mady)
+### Poste 2 – Données & Catalogue (Pape Mor)
 - Gestion des points utilisateur
 - Structure `Cadeau` (nom, coût)
 - Catalogue de cadeaux
@@ -48,7 +48,7 @@ Reproduire le service **Orange Sargal** (#221#) qui permet :
 
 ---
 
-### Poste 3 – Logique métier & POO (Pape Mor)
+### Poste 3 – Logique métier & POO (Kara)
 - Validation du choix cadeau
 - Déduction des points
 - Mise à jour des données
