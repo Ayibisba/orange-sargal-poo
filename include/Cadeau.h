@@ -7,7 +7,7 @@ using namespace std;
 class Cadeau {
 private:
     string nom;
-    int cout;
+    int coutPoints; // renommé (cout était en conflit avec std::cout)
 
 public:
     Cadeau(string n, int c);
