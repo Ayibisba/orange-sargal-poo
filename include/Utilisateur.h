@@ -14,7 +14,7 @@ public:
 
     string getNom();
     int getPoints();
-
+    void setPoints(int p);
     void ajouterPoints(int p);
     bool utiliserPoints(int p);
 };
