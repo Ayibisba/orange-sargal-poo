@@ -13,16 +13,24 @@ int main() {string codeUtilisateur;
     cin >> codeUtilisateur;
     
     if (verifierAcces(codeUtilisateur)) {
+
+        Utilisateur user("Client Sargal", 200);
+
+        Catalogue cat;
+        cat.ajouterCadeau(Cadeau("Pass Internet 5Go", 50));
+        cat.ajouterCadeau(Cadeau("Credit Appel 2000F", 100));
+        cat.ajouterCadeau(Cadeau("Smartphone", 500));
+        
         int choix;
         do {
             afficherMenu();
             choix = demanderChoix();
             
             if (choix == 1) {
-                cout << "Tu pourras choisir un cadeau ici" << endl;
+                gererEchange(user, cat);
             } 
             else if (choix == 2) {
-                cout << " Tu pourras voir tes points ici" << endl;
+                cout << "\nVos points : " << user.getPoints() << " pts\n";
             }
             else if (choix == 3) {
                 cout << "Merci ! A bientot sur Orange Sargal." << endl;
