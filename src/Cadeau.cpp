@@ -1,8 +1,8 @@
-#include "Cadeau.h"
+#include "../include/Cadeau.h"
 
 Cadeau::Cadeau(string n, int c) {
     nom = n;
-    cout = c;
+    coutPoints = c;
 }
 
 string Cadeau::getNom() {
@@ -10,5 +10,5 @@ string Cadeau::getNom() {
 }
 
 int Cadeau::getCout() {
-    return cout;
+    return coutPoints;
 }
