@@ -1,25 +1,40 @@
 #include <iostream>
 #include "../include/Catalogue.h"
-#include "../include/Utilisateur.h" 
+#include "../include/Utilisateur.h"
+#include "../include/Couleurs.h"
+using namespace std;
 
 void gererEchange(Utilisateur &user, Catalogue &cat) {
+    cout << endl;
+    cout << ORANGE << BOLD << "  🎁  CATALOGUE DES CADEAUX" << RESET << endl;
+    cout << GRIS << "  ─────────────────────────────────────" << RESET << endl;
     cat.afficherCadeaux();
+    cout << GRIS << "  ─────────────────────────────────────" << RESET << endl;
+    cout << JAUNE << "  Choisissez un cadeau (0 pour annuler) : " << RESET;
+
     int choix;
-    std::cout << "Choisissez un cadeau (0 pour annuler) : ";
-    std::cin >> choix;
+    cin >> choix;
+
+    if (choix == 0) {
+        cout << GRIS << "\n  Retour au menu..." << RESET << endl;
+        return;
+    }
 
     if (choix > 0 && choix <= cat.nbCadeaux()) {
         Cadeau c = cat.getCadeau(choix - 1);
-        
-        // Vérification et mise à jour (Critères 1 & 2)
         if (user.getPoints() >= c.getCout()) {
             user.setPoints(user.getPoints() - c.getCout());
-            cout << "Succes ! Cadeau : " << c.getNom() << "\n";
-            cout << "Nouveau solde : " << user.getPoints() << " points.\n";
+            cout << VERT << BOLD << "\n  ✅ Succes ! Cadeau choisi : "
+                 << c.getNom() << RESET << endl;
+            cout << VERT << "  💰 Nouveau solde : "
+                 << user.getPoints() << " points." << RESET << endl;
         } else {
-            cout << "Points insuffisants !\n";
+            int manque = c.getCout() - user.getPoints();
+            cout << ROUGE << BOLD << "\n  ❌ Points insuffisants !" << RESET << endl;
+            cout << ROUGE << "  Il vous manque " << manque
+                 << " points pour ce cadeau." << RESET << endl;
         }
-    } else if (choix != 0) {
-        cout << "Choix invalide.\n";
+    } else {
+        cout << ROUGE << "\n  Choix invalide." << RESET << endl;
     }
 }
