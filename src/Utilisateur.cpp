@@ -1,4 +1,4 @@
-#include "Utilisateur.h"
+#include "../include/Utilisateur.h"
 
 Utilisateur::Utilisateur(string n, int p) {
     nom = n;
@@ -12,6 +12,8 @@ string Utilisateur::getNom() {
 int Utilisateur::getPoints() {
     return points;
 }
+
+void Utilisateur::setPoints(int p) { points = p; }
 
 void Utilisateur::ajouterPoints(int p) {
     points += p;
