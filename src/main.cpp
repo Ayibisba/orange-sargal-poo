@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
-#include "Service.h"  
-#include "Menu.h" 
+#include "../include/Service.h"
+#include "../include/Menu.h"
+#include "../include/Utilisateur.h"
+#include "../include/Catalogue.h"
+#include "../include/Session.h"
 using namespace std;
 
 
