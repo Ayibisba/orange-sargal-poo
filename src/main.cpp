@@ -12,6 +12,7 @@ int main() {
     string codeUtilisateur;
     string nomUtilisateur;
 
+    system("clear");
     afficherBanniere();
 
     cout << ORANGE << "  Pour acceder au service, tapez #221# : " << RESET;
@@ -20,6 +21,9 @@ int main() {
     if (verifierAcces(codeUtilisateur)) {
         cout << JAUNE << "\n  Comment vous appelez-vous ? " << RESET;
         cin >> nomUtilisateur;
+
+        system("clear");
+        afficherBanniere();
         cout << VERT << BOLD << "\n  Bonjour " << nomUtilisateur
              << " ! Vous avez 200 points Sargal. 🎉" << RESET << endl;
 
@@ -34,7 +38,10 @@ int main() {
         do {
             afficherMenu();
             choix = demanderChoix();
+            system("clear");
+            afficherBanniere();
 
+            
             if (choix == 1) {
                 gererEchange(user, cat);
             }
