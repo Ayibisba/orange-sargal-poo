@@ -33,6 +33,7 @@ int main() {
         cat.ajouterCadeau(Cadeau("Pass Internet 5Go", 50));
         cat.ajouterCadeau(Cadeau("Credit Appel 2000F", 100));
         cat.ajouterCadeau(Cadeau("Smartphone", 500));
+        cat.ajouterCadeau(Cadeau("Pc", 1000))
 
         int choix;
         do {
